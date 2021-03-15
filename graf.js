@@ -1,5 +1,4 @@
-
-    function draw() {
+ function draw() {
       var canvas = document.getElementById('canvas');
       if (canvas.getContext) {
         var ctx = canvas.getContext("2d");
@@ -9,11 +8,11 @@
 			ctx.save();
 			ctx.beginPath();
 			ctx.moveTo(0, 0);
-			ctx.lineTo(600, 0);
-			ctx.lineTo(600, 600);
-			ctx.lineTo(0, 600);
+			ctx.lineTo(500, 0);
+			ctx.lineTo(500, 500);
+			ctx.lineTo(0, 500);
 			ctx.closePath();
-			ctx.fillStyle = '#FDFDFD';
+			ctx.fillStyle = 'white';
 			ctx.fill();
 			ctx.restore();
 		}
@@ -49,7 +48,7 @@
 			ctx.save();
 			ctx.save();	
 			ctx.transform(0, -0.25, -0.25, 0, 375, 125);
-			if (step == num) ctx.fillStyle = "yellow";
+			if (step == num) ctx.fillStyle = "black";
 			drawF(step-1);
 			ctx.restore();
 			ctx.transform( 0.5, 0,0, -0.5, 250, 500);
